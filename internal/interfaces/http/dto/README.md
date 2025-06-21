@@ -1,0 +1,1 @@
+## Только под генерацию из `./api/openapi/generate_dto.sh`!

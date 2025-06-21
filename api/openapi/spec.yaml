@@ -1,0 +1,27 @@
+openapi: 3.0.0
+
+info:
+  title: Микросервис авторизации API
+  version: 1.0.0
+  description: >
+    Этот API предназначен для управления аутентификацией и пользователями.
+    Включает эндпоинты для входа, регистрации и работы с данными пользователей.
+
+tags:
+  - name: auth
+    description: 
+      Аутентификация и регистрация пользователей.
+  - name: users
+    description: 
+      Работа с данными о пользователях.
+
+paths:
+  /auth/login:
+    $ref: "./paths/auth/login.yaml"
+  /auth/register:
+    $ref: "./paths/auth/register.yaml"
+  
+  /users:
+    $ref: "./paths/users/users.yaml"
+  /users/{id}:
+    $ref: "./paths/users/user_by_id.yaml"
