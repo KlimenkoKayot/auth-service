@@ -1,0 +1,13 @@
+LoginResponse:
+  type: object
+  title: LoginResponse
+  properties:
+    accessToken:
+      type: string
+      description: JWT access-token для авторизации
+    refreshToken:
+      type: string
+      description: JWT refresh-token для авторизации
+    expiresIn:
+      type: integer
+      description: Время жизни токена в секундах

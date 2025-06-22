@@ -1,0 +1,26 @@
+post:
+  tags:
+    - auth
+  summary: Вход в систему
+  description: |
+    Позволяет пользователю выполнить вход в систему, получив токен доступа.
+    Требуется email и пароль.
+  operationId: loginUser
+  requestBody:
+    description: Данные для входа
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/requests.yaml#/UserLoginRequest"
+  responses:
+    200:
+      description: Успешная аутентификация
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/responses.yaml#/LoginResponse"
+    400:
+      description: Неверный формат запроса
+    401:
+      description: Неверные учетные данные
